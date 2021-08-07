@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-first-hard-project": {
+    "seu-atendimento": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -126,5 +126,5 @@
       }
     }
   },
-  "defaultProject": "my-first-hard-project"
+  "defaultProject": "seu-atendimento"
 }
