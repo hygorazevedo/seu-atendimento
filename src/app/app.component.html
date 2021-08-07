@@ -1,0 +1,10 @@
+<div class="page" [ngClass]="{'mobile': (isHandset$|async)}">
+    <div class="page-content" [ngClass]="{'mobile': (isHandset$|async)}">
+        <app-stepper [removeFeatureOff]="stepperFeature"></app-stepper>
+        <router-outlet></router-outlet>
+    </div>
+    <div class="footer" [removeFeatureOff]="footerFeature">
+        <app-button type="backward" text="Voltar"></app-button>
+        <app-button type="foward" text="Avançar"></app-button>
+    </div>
+</div>

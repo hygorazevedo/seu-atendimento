@@ -1,0 +1,17 @@
+.tooltip {
+    user-select: none;
+    position: absolute;
+    max-width: 90%;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    color: gray;
+    text-transform: capitalize;
+    z-index: 1000;
+    display: none;
+}
+
+.tooltip_show {
+    display: inline;
+}

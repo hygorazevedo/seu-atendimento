@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+app-root {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+
+    app-root {
+        height: 100vh;
+
+        .content {
+            height: auto;
+            margin: 40px 5% 0px 5%;
+            border: 1px solid lightgray;
+            border-radius: 8px;
+            display: flex;
+            flex: 1;
+        }
+    }
+}
+
+.title {
+    user-select: none;
+    position: relative;
+    top: -13px;
+    left: 20px;
+    background-color: white;
+    color: gray;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+@import './scss/button.scss';
+@import './scss/tooltip.scss';

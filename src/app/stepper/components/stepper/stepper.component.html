@@ -1,0 +1,14 @@
+<div class="stepper-area" [ngClass]="{'isMobile': (isHandset$|async), 'isDesktop': !(isHandset$|async)}">
+    <div class="step-area" *ngFor="let step of steps">
+        <div class="step-progress-area">
+            <a class="step-progress-icon" *ngIf="(isHandset$|async)" [ngClass]="{'done': step.done, 'active': step.active}" [routerLink]="[step.link]" [state]="step.id" [tooltip]="step.description">
+                <span class="step-progress-sub-icon" [ngClass]="{'done': step.done, 'active': step.active}"></span>
+            </a>
+            <a class="step-progress-icon" *ngIf="!(isHandset$|async)" [ngClass]="{'done': step.done, 'active': step.active}" [routerLink]="[step.link]" [state]="step.id">
+                <span class="step-progress-sub-icon" [ngClass]="{'done': step.done, 'active': step.active}"></span>
+            </a>
+            <span class="step-progress-line" [ngClass]="{'done': step.done, 'active': step.active}"></span>
+        </div>
+        <div class="step-description" *ngIf="!(isHandset$|async)" [ngClass]="{'done': step.done, 'active': step.active}" [routerLink]="[step.link]" [state]="step.id">{{step.description}}</div> 
+    </div>
+</div>
