@@ -11,7 +11,6 @@ import { Step } from '../../models/step.model';
   styleUrls: ['./stepper.component.scss']
 })
 export class StepperComponent implements OnInit, AfterViewInit {
-  responsiveStepperFeature: 'responsiveStepperFeature';
   isHandset$: Observable<boolean>;
   steps: Step[];
 

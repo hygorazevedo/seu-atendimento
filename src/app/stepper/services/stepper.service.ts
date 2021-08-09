@@ -2,9 +2,7 @@ import { Inject, Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { Step } from "../models/step.model";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class StepperService {
 
   steps$ = new BehaviorSubject<Step[]>(this.steps);
