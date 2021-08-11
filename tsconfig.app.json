@@ -1,7 +1,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
+    "outDir": "./dist/seu-atendimento",
+    "sourceMap": true,
     "types": []
   },
   "files": [
@@ -12,6 +13,7 @@
     "src/**/*.d.ts"
   ],
   "exclude": [
-    "**/*.stories.*"
+    "**/*.stories.*",
+    "src/**/*.spec.ts"
   ]
 }

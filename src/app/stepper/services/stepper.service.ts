@@ -7,33 +7,31 @@ export class StepperService {
 
   steps$ = new BehaviorSubject<Step[]>(this.steps);
 
-  constructor(@Inject('steps') private steps: Step[]) {}
+  constructor(@Inject('steps') private steps: Step[]) {
+    this.set(1);
+  }
 
-  set(stepId: number): void {
-    if (isNaN(stepId) || stepId <= 0 || !this.steps || this.steps.length === 0) {
+  set(id: number): void {
+    if (!this.isValidId(id)) {
       return;
     }
 
     this.steps = this.steps.map(s => {
-      if (s.id === stepId) {
-        s.active = true;
-        s.done = false;
-      } else {
-        s.active = false;
-        s.done = false;
-      }
-
-      if (s.id < stepId) {
+      if (s.active || s.id < id) {
         s.done = true;
+        s.active = false;
       }
 
-      if (s.id > stepId) {
-        s.done = false;
+      if (s.id === id) {
+        s.active = true;
       }
-
       return s;
     });
 
-    this.steps$.next([...this.steps]);
+    this.steps$.next(this.steps);
+  }
+
+  private isValidId(id: number): boolean {
+    return !isNaN(id) && id > 0 && this.steps && this.steps.length > 0;
   }
 }

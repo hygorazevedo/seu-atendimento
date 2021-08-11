@@ -7,7 +7,7 @@
             <a class="step-progress-icon" *ngIf="!(isHandset$|async)" [ngClass]="{'done': step.done, 'active': step.active}" [routerLink]="[step.link]" [state]="step.id">
                 <span class="step-progress-sub-icon" [ngClass]="{'done': step.done, 'active': step.active}"></span>
             </a>
-            <span class="step-progress-line" [ngClass]="{'done': step.done, 'active': step.active}"></span>
+            <span class="step-progress-line" [ngClass]="{'done': step.done || step.active}"></span>
         </div>
         <div class="step-description" *ngIf="!(isHandset$|async)" [ngClass]="{'done': step.done, 'active': step.active}" [routerLink]="[step.link]" [state]="step.id">{{step.description}}</div> 
     </div>

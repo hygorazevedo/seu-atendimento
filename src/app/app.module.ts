@@ -17,8 +17,7 @@ const steps = [
   {
     id: 1,
     description: 'reservas',
-    active: true,
-    checked: true,
+    active: false,
     done: false,
     link: 'reservas'
   }, 
@@ -26,7 +25,6 @@ const steps = [
     id: 2,
     description: 'detalhes',
     active: false,
-    checked: false,
     done: false,
     link: 'detalhes'
   },
@@ -34,7 +32,6 @@ const steps = [
     id: 3,
     description: 'modelos',
     active: false,
-    checked: false,
     done: false,
     link: 'modelos'
   },
@@ -42,7 +39,6 @@ const steps = [
     id: 4,
     description: 'placas',
     active: false,
-    checked: false,
     done: false,
     link: 'placas'
   },
@@ -50,7 +46,6 @@ const steps = [
     id: 5,
     description: 'pagamento',
     active: false,
-    checked: false,
     done: false,
     link: 'pagamento'
   },
@@ -58,7 +53,6 @@ const steps = [
     id: 6,
     description: 'contrato',
     active: false,
-    checked: false,
     done: false,
     link: 'contrato'
   }
