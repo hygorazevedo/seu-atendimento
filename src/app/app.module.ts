@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ContratoGuard } from './guards/contrato.guard';
 import { SleepingGuard } from './guards/sleeping.guard';
 import { ButtonComponent } from './components/button/button.component';
 import { StepperModule } from './stepper/stepper.module';
@@ -73,10 +72,7 @@ const steps = [
     ContratoModule,
     StepperModule.forRoot(steps)
   ],
-  providers: [
-    ContratoGuard,
-    SleepingGuard
-  ],
+  providers: [SleepingGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

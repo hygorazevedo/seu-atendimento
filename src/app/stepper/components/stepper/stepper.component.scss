@@ -137,16 +137,23 @@
                         }
                     }
                 }
-        
+
                 .step-progress-line {
+                    z-index: -1;
                     position: relative;
                     left: -50%;
-                    z-index: -1;
+                    top: -80%;
                     border-left: 1px solid lightgray;
 
                     &.done {
                         border-color: green;
                     }
+                }
+            }
+
+            &:first-of-type {
+                .step-progress-line {
+                    display: none;
                 }
             }
 
@@ -159,14 +166,6 @@
                 &.active, 
                 &.done {
                     color: green;
-                }
-            }
-
-            &:last-of-type {
-                height: 20px;
-
-                .step-progress-line {
-                    display: none;
                 }
             }
         }

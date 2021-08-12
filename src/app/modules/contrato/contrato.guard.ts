@@ -1,7 +1,7 @@
 import { Location } from "@angular/common";
 import { Injectable } from "@angular/core";
 import { CanActivate, Router } from "@angular/router";
-import { StepperService } from "../stepper/services/stepper.service";
+import { StepperService } from "src/app/stepper/services/stepper.service";
 
 @Injectable()
 export class ContratoGuard implements CanActivate {
