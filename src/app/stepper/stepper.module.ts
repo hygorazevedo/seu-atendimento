@@ -16,7 +16,7 @@ export class StepperModule {
     if (parentModule) {
         throw new Error('StepperModule is already loaded. Import it in the AppModule Only');
     }
-}
+  }
 
   static forRoot(steps: Array<Step>): ModuleWithProviders<StepperModule> {
     return {

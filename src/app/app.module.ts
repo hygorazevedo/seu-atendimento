@@ -11,6 +11,7 @@ import { CarroModule } from './modules/carro/carro.module';
 import { PagamentoModule } from './modules/pagamento/pagamento.module';
 import { ContratoModule } from './modules/contrato/contrato.module';
 import { FooterModule } from './modules/footer/footer.module';
+import { SharedModule } from './modules/shared/shared.module';
 
 const steps = [
   {
