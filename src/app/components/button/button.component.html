@@ -1,1 +1,5 @@
-<span class="button" [ngClass]="{'disabled': disabled}" [routerLink]="[step.link]" [state]="step.id">{{text}}</span>
+<!-- <span class="button" [ngClass]="{'disabled': disabled}" [routerLink]="[step.link]" [state]="step.id">{{text}}</span> -->
+<span class="button" [ngClass]="{'disabled': disabled}" (click)="handleClick()">
+    <span *ngIf="text">{{text}}</span>
+    <mat-icon *ngIf="icon">{{icon}}</mat-icon>
+</span>

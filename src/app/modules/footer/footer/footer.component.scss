@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5%;
+
+    .horizontal-footer {
+        app-button + app-button {
+            margin-left: 10px;
+        }
+
+        display: flex;
+        &.right {
+            justify-content: flex-end;
+        }
+    }
+}

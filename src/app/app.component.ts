@@ -11,7 +11,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   isHandset$: Observable<boolean>;
-
+  
   constructor(private breakpoint: BreakpointObserver,
               private router: Router) {}
 

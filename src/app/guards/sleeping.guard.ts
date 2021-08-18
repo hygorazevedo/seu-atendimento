@@ -10,10 +10,10 @@ export class SleepingGuard implements CanActivate {
 
     canActivate(): boolean {
         const regra = true;
-        const stepId = Number(this.router.getCurrentNavigation().extras.state);
-
+        
         if (regra) {
-            this.stepperService.set(stepId);
+            const state = { ...this.router.getCurrentNavigation().extras.state };
+            this.stepperService.set(state.id);
         }
 
         return regra;

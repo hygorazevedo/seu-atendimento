@@ -1,0 +1,9 @@
+<div class="footer">
+    <div class="horizontal-footer">
+        <app-button icon="shopping_cart" (clickButton)="handleViewCart()"></app-button>
+    </div>
+    <div class="horizontal-footer right">
+        <app-button text="Voltar" [disabled]="backwardButtonDisabled" (clickButton)="handleBackward()"></app-button>
+        <app-button text="Avançar" [disabled]="fowardButtonDisabled" (clickButton)="handleFoward()"></app-button>
+    </div>
+</div>

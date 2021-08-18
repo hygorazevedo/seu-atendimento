@@ -4,13 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { SleepingGuard } from './guards/sleeping.guard';
-import { ButtonComponent } from './components/button/button.component';
 import { StepperModule } from './stepper/stepper.module';
 import { Step } from './stepper/models/step.model';
 import { ReservaModule } from './modules/reserva/reserva.module';
 import { CarroModule } from './modules/carro/carro.module';
 import { PagamentoModule } from './modules/pagamento/pagamento.module';
 import { ContratoModule } from './modules/contrato/contrato.module';
+import { FooterModule } from './modules/footer/footer.module';
 
 const steps = [
   {
@@ -58,14 +58,12 @@ const steps = [
 ] as Step[];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ButtonComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
     NoopAnimationsModule,
+    FooterModule,
     ReservaModule,
     CarroModule,
     PagamentoModule,

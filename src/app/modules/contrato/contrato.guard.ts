@@ -14,8 +14,8 @@ export class ContratoGuard implements CanActivate {
         const regra = this.location.isCurrentPathEqualTo('/pagamento');
         
         if (regra) {
-            const stepId = Number(this.router.getCurrentNavigation().extras.state);
-            this.stepperService.set(stepId);
+            const state = { ...this.router.getCurrentNavigation().extras.state };
+            this.stepperService.set(state.id);
         } else {
             console.error('Blocked by validation! Check ContratoGuard for more details.');
         }

@@ -4,6 +4,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { Observable } from 'rxjs/internal/Observable';
 import { StepperService } from '../../services/stepper.service';
 import { Step } from '../../models/step.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-stepper',
@@ -15,11 +16,16 @@ export class StepperComponent implements OnInit {
   steps$: Observable<Step[]>;
 
   constructor(private breakpoint: BreakpointObserver,
-              private stepperService: StepperService) { }
+              private stepperService: StepperService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.isHandset$ = this.breakpoint.observe(Breakpoints.Handset)
                                      .pipe(map(result => result.matches), shareReplay());
     this.steps$ = this.stepperService.steps$;
+  }
+
+  handleNavigate(route: string, id: number): void {
+    this.router.navigate([route], { state: { id } });
   }
 }
