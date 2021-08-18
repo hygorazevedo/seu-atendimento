@@ -7,10 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
-    "storybook": "npm run docs:json && start-storybook -p 6006",
-    "build-storybook": "npm run docs:json && build-storybook"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -34,10 +31,6 @@
     "@angular/compiler-cli": "~12.0.5",
     "@babel/core": "^7.14.5",
     "@compodoc/compodoc": "^1.1.11",
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/angular": "^6.2.9",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
