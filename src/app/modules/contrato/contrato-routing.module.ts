@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SleepingGuard } from 'src/app/guards/sleeping.guard';
+import { SleepingGuard } from '../shared/guards/sleeping.guard';
 import { ContratoComponent } from './contrato/contrato.component';
 
 const routes: Routes = [
@@ -9,6 +9,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [SleepingGuard]
 })
 export class ContratoRoutingModule { }

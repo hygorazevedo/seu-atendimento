@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { SleepingGuard } from './guards/sleeping.guard';
 import { StepperModule } from './stepper/stepper.module';
 import { Step } from './stepper/models/step.model';
 import { ReservaModule } from './modules/reserva/reserva.module';
@@ -11,7 +10,6 @@ import { CarroModule } from './modules/carro/carro.module';
 import { PagamentoModule } from './modules/pagamento/pagamento.module';
 import { ContratoModule } from './modules/contrato/contrato.module';
 import { FooterModule } from './modules/footer/footer.module';
-import { SharedModule } from './modules/shared/shared.module';
 
 const steps = [
   {
@@ -71,7 +69,6 @@ const steps = [
     ContratoModule,
     StepperModule.forRoot(steps)
   ],
-  providers: [SleepingGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
