@@ -11,6 +11,10 @@
         display: flex;
         &.right {
             justify-content: flex-end;
+
+            .hide {
+                display: none;
+            }
         }
     }
 }

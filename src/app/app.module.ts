@@ -16,42 +16,42 @@ import { SharedModule } from './modules/shared/shared.module';
 const steps = [
   {
     id: 1,
-    description: 'reservas',
+    description: 'Reservas',
     active: false,
     done: false,
     link: 'reservas'
   }, 
   {
     id: 2,
-    description: 'detalhes',
+    description: 'Detalhes',
     active: false,
     done: false,
     link: 'detalhes'
   },
   {
     id: 3,
-    description: 'modelos',
+    description: 'Modelos',
     active: false,
     done: false,
     link: 'modelos'
   },
   {
     id: 4,
-    description: 'placas',
+    description: 'Placas',
     active: false,
     done: false,
     link: 'placas'
   },
   {
     id: 5,
-    description: 'pagamento',
+    description: 'Pagamento',
     active: false,
     done: false,
     link: 'pagamento'
   },
   {
     id: 6,
-    description: 'contrato',
+    description: 'Contrato',
     active: false,
     done: false,
     link: 'contrato'

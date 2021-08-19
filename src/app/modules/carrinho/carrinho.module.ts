@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { CarrinhoRoutingModule } from './carrinho-routing.module';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [CarrinhoComponent],
+  imports: [CommonModule, CarrinhoRoutingModule]
 })
 export class CarrinhoModule { }

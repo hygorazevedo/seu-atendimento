@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContratoGuard } from './contrato.guard';
+import { SleepingGuard } from 'src/app/guards/sleeping.guard';
 import { ContratoComponent } from './contrato/contrato.component';
 
 const routes: Routes = [
-  { path: '', component: ContratoComponent, canActivate: [ContratoGuard] },
+  { path: '', component: ContratoComponent, canActivate: [SleepingGuard] },
 ];
 
 @NgModule({

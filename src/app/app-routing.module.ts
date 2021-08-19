@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'modelos', loadChildren: () => import('./modules/carro/carro.module').then(m => m.CarroModule) },
   { path: 'pagamento', loadChildren: () => import('./modules/pagamento/pagamento.module').then(m => m.PagamentoModule) },
   { path: 'contrato', loadChildren: () => import('./modules/contrato/contrato.module').then(m => m.ContratoModule) },
+  { path: 'carrinho', loadChildren: () => import('./modules/carrinho/carrinho.module').then(m => m.CarrinhoModule) },
   { path: '', redirectTo: '/reservas', pathMatch: 'full' },
 ];
 
