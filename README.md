@@ -6,13 +6,13 @@ Para executar este projeto localmente, tenha certeza de ter instalado em sua má
 
 É possível baixar o projeto zipado, ou via linha de comando em seu terminal. Para seguir com o download via linha de comando, será necessário instalar o sismtea de controle de versões em [Git/Download](https://git-scm.com/downloads).
 
-## Building
+## Construção
 
 No prompt de comando, navegue até a pasta do projeto e execute o seguinte comando:~
 
 > npm install
 
-## Executing
+## Execução
 
 Ainda no prompt de comando, execute o comando:
 
