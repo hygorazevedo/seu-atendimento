@@ -57,7 +57,7 @@ export class FooterComponent implements OnInit, OnDestroy {
         this.backwardButtonDisabled = true;
       }
 
-      this.router.navigate([step.link], { state: {id: step.id} });
+      this.stepperService.set(step.id);
     }
   }
 
@@ -66,7 +66,7 @@ export class FooterComponent implements OnInit, OnDestroy {
 
     const currentStep = this.list.find(s => s.active);
 
-    this.router.navigate([currentStep.link], { state: {id: currentStep.id} });
+    this.stepperService.set(currentStep.id);
   }
 
   handleFoward(): void {
@@ -84,7 +84,7 @@ export class FooterComponent implements OnInit, OnDestroy {
         this.fowardButtonDisabled = true;
       }
 
-      this.router.navigate([step.link], { state: {id: step.id} });
+      this.stepperService.set(step.id);
     }
   }
 

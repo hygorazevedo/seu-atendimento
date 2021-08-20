@@ -3,6 +3,7 @@ import { BehaviorSubject, Subscription } from "rxjs";
 import { Step } from "../models/step.model";
 import { Observable } from 'rxjs/internal/Observable';
 import { switchMap } from "rxjs/operators";
+import { Router } from "@angular/router";
 
 @Injectable()
 export class StepperService implements OnDestroy {
@@ -10,7 +11,8 @@ export class StepperService implements OnDestroy {
   steps$ = new BehaviorSubject<Step[]>(this.steps);
   sub: Subscription;
 
-  constructor(@Inject('steps') private steps: Step[]) {
+  constructor(@Inject('steps') private steps: Step[],
+                               private router: Router) {
     if(!steps || steps.length <= 0) {
      throw new Error('Steps is not defined.');
     }
@@ -32,6 +34,7 @@ export class StepperService implements OnDestroy {
         .subscribe(steps => {
           this.steps = steps;
           this.steps$.next(this.steps);
+          this.stepNavigate();
         });
   }
 
@@ -79,5 +82,11 @@ export class StepperService implements OnDestroy {
       sender.next(steps);
       sender.complete();
     })
+  }
+
+  private stepNavigate(): void {
+    const currentStep = this.steps.find(step => step.active);
+
+    this.router.navigate([`${currentStep.link}`]);
   }
 }
