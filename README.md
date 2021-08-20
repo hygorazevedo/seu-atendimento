@@ -8,7 +8,7 @@ Para executar este projeto localmente, tenha certeza de ter instalado em sua má
 
 ## Construção
 
-No prompt de comando, navegue até a pasta do projeto e execute o seguinte comando:~
+No prompt de comando, navegue até a pasta do projeto e execute o seguinte comando:
 
 > npm install
 
