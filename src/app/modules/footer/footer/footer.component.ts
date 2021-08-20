@@ -28,13 +28,13 @@ export class FooterComponent implements OnInit, OnDestroy {
     this.sub = this.stepperService.steps$.subscribe(steps => {
       this.list = steps;
 
-      const currentStep = this.list.find(s => s.active);
+      const currentStepIndex = this.list.findIndex(step => step.active);
 
       this.inCart = false;
       this.fowardButtonDisabled = false;
       this.backwardButtonDisabled = false;
       
-      this.disableFirstOrLast(currentStep.id);
+      this.disableFirstOrLast(currentStepIndex);
     });
   }
 
@@ -44,14 +44,16 @@ export class FooterComponent implements OnInit, OnDestroy {
 
   handleBackward(): void {
     this.inCart = false;
-    const currentStep = this.list.find(s => s.active);
-    
-    if (currentStep.id - 1 >= 1) {
-      const step = this.list.find(s => s.id === currentStep.id - 1);
+
+    const currentStepIndex = this.list.findIndex(step => step.active);
+    const previousStepIndex = currentStepIndex - 1;
+
+    if (previousStepIndex >= 0) {
+      const step = this.list.find((value, index: number) => index === previousStepIndex);
       this.fowardButtonDisabled = false;
       this.backwardButtonDisabled = false;
 
-      if (currentStep.id - 1 === 1) {
+      if (previousStepIndex <= 0) {
         this.backwardButtonDisabled = true;
       }
 
@@ -69,14 +71,16 @@ export class FooterComponent implements OnInit, OnDestroy {
 
   handleFoward(): void {
     this.inCart = false;
-    const currentStep = this.list.find(s => s.active);
 
-    if (currentStep.id + 1 <= this.list.length) {
-      const step = this.list.find(s => s.id === currentStep.id + 1);
+    const currentStepIndex = this.list.findIndex(step => step.active);
+    const nextStepIndex = currentStepIndex + 1;
+
+    if (nextStepIndex <= this.list.length) {
+      const step = this.list.find((value, index: number) => index === nextStepIndex);
       this.fowardButtonDisabled = false;
       this.backwardButtonDisabled = false;
 
-      if (currentStep.id + 1 === this.list.length) {
+      if (nextStepIndex >= this.list.length) {
         this.fowardButtonDisabled = true;
       }
 
@@ -91,11 +95,12 @@ export class FooterComponent implements OnInit, OnDestroy {
     this.router.navigate(['carrinho']);
   }
 
-  private disableFirstOrLast(id: number): void {
-    if (id === 1) {
+  private disableFirstOrLast(index: number): void {
+    if (index <= 0) {
       this.backwardButtonDisabled = true;
     }
-    if (id === this.list.length) {
+
+    if (index >= this.list.length -1) {
       this.fowardButtonDisabled = true;
     }
   }

@@ -20,41 +20,42 @@ const steps = [
     link: 'reservas'
   }, 
   {
-    id: 2,
+    id: 3,
     description: 'Detalhes',
     active: false,
     done: false,
     link: 'detalhes'
   },
   {
-    id: 3,
+    id: 5,
     description: 'Modelos',
     active: false,
     done: false,
     link: 'modelos'
   },
   {
-    id: 4,
+    id: 7,
     description: 'Placas',
     active: false,
     done: false,
     link: 'placas'
   },
   {
-    id: 5,
+    id: 9,
     description: 'Pagamento',
     active: false,
     done: false,
     link: 'pagamento'
   },
   {
-    id: 6,
+    id: 11,
     description: 'Contrato',
     active: false,
     done: false,
     link: 'contrato'
   }
 ] as Step[];
+
 
 @NgModule({
   declarations: [AppComponent],

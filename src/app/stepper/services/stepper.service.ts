@@ -11,6 +11,10 @@ export class StepperService implements OnDestroy {
   sub: Subscription;
 
   constructor(@Inject('steps') private steps: Step[]) {
+    if(!steps || steps.length <= 0) {
+     throw new Error('Steps is not defined.');
+    }
+    
     this.set(1);
   }
 
