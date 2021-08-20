@@ -19,6 +19,3 @@ Ainda no prompt de comando, execute o comando:
 > npm run start
 
 Após o processo de compilação finalizar acesse no navegador o [Link](http://localhost:4200).
-
-
-### Outros projetos de [Hygor Azevedo](https://github.com/hygorazevedo?tab=repositories).
