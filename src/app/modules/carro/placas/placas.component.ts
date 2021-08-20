@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-placas',
-  host: { class: 'content' },
+  host: { class: 'content rb' },
   templateUrl: './placas.component.html',
   styleUrls: ['./placas.component.scss']
 })
