@@ -1,4 +1,5 @@
 <div class="page" [ngClass]="{'mobile': (isHandset$|async)}">
+    <app-header></app-header>
     <div class="page-content" [ngClass]="{'mobile': (isHandset$|async)}">
         <app-stepper></app-stepper>
         <router-outlet></router-outlet>

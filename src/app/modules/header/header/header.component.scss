@@ -1,0 +1,18 @@
+.page-header {
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+
+    user-select: none;
+
+    img {
+        cursor: pointer;
+    }
+
+    app-profile {
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+    }
+}

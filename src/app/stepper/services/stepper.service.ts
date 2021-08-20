@@ -42,7 +42,10 @@ export class StepperService implements OnDestroy {
       return s;
     });
 
-    this.set(1);
+    this.useRuleForActivate(1, this.steps).subscribe(steps => {
+      this.steps = steps;
+      this.steps$.next(this.steps);
+    });
   }
 
   private isValidId(id: number): boolean {

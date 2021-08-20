@@ -9,25 +9,26 @@ body,
 app-root {
     width: 100vw;
     height: 100vh;
+
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-body {
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+.content {
+    height: auto;
+    margin-top: 40px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
-    app-root {
-        height: 100vh;
+.b {
+    border: 1px solid lightgray;
+}
 
-        .content {
-            height: auto;
-            margin: 40px 5% 0px 5%;
-            padding: 5px;
-            border: 1px solid lightgray;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-    }
+.rb {
+    border: 1px solid lightgray;
+    border-radius: 8px;
 }
 
 .title {
