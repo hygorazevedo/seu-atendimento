@@ -1,10 +1,9 @@
 <div class="footer">
     <div class="horizontal-footer">
-        <app-button icon="shopping_cart" (clickButton)="handleViewCart()"></app-button>
+        <app-button icon="shopping_cart" [ngClass]="{'active': inCart}" (clickButton)="handleViewCart(!inCart)"></app-button>
     </div>
     <div class="horizontal-footer right">
-        <app-button text="Voltar" [ngClass]="{'hide': inCart}" [disabled]="backwardButtonDisabled" (clickButton)="handleBackward()"></app-button>
-        <app-button [text]="currentStepName" [ngClass]="{'hide': !inCart}" (clickButton)="handleReturnToCurrent()"></app-button>
-        <app-button text="Avançar" [ngClass]="{'hide': inCart}" [disabled]="fowardButtonDisabled" (clickButton)="handleFoward()"></app-button>
+        <app-button text="Voltar" [disabled]="backwardButtonDisabled" (clickButton)="handleBackward()"></app-button>
+        <app-button text="Avançar" [disabled]="fowardButtonDisabled" (clickButton)="handleFoward()"></app-button>
     </div>
 </div>

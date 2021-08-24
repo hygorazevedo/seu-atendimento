@@ -11,9 +11,13 @@
         display: flex;
         &.right {
             justify-content: flex-end;
+        }
 
-            .hide {
-                display: none;
+        .active {
+            ::ng-deep .button {
+                background-color: white;
+                border-color: green;
+                color: green;
             }
         }
     }

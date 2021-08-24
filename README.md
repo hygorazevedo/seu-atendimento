@@ -1,5 +1,9 @@
 # Seu Atendimento
 
+## Introdução
+
+<!-- TODO -->
+
 ## Pre-requisitos
 
 Para executar este projeto localmente, tenha certeza de ter instalado em sua máquina Node. Você encontra o link de download e instruções de instalação em [NodeJS/Download](https://nodejs.org/en/download/).

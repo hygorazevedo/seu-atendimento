@@ -61,14 +61,6 @@ export class FooterComponent implements OnInit, OnDestroy {
     }
   }
 
-  handleReturnToCurrent(): void {
-    this.inCart = false;
-
-    const currentStep = this.list.find(s => s.active);
-
-    this.stepperService.set(currentStep.id);
-  }
-
   handleFoward(): void {
     this.inCart = false;
 
@@ -88,11 +80,15 @@ export class FooterComponent implements OnInit, OnDestroy {
     }
   }
 
-  handleViewCart(): void {
-    this.inCart = true;
+  handleViewCart(active): void {
     const currentStep = this.list.find(s => s.active);
-    this.currentStepName = `Voltar para ${currentStep.description}`;
-    this.router.navigate(['carrinho']);
+    
+    if (!active) {
+      this.stepperService.set(currentStep.id);
+    } else {
+      this.router.navigate(['carrinho']);
+    }
+    this.inCart = active;
   }
 
   private disableFirstOrLast(index: number): void {
