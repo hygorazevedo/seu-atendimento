@@ -1,6 +1,7 @@
 .progress {
     position: relative;
-
+    padding-top: 2px;
+    
     .progress__svg {
         transform: rotate(-90deg);
         width: 80px;
@@ -22,7 +23,7 @@
     }
     .progress__value-text {
         position: absolute;
-        top: 30px;
+        top: 32px;
         left: 18px;
         font-weight: bold;
         color: gray;

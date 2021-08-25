@@ -6,7 +6,7 @@
     height: 100%;
     padding: 0 5%;
 
-    &.mobile {
+    &.isHandset {
         padding: 0;
 
         ::ng-deep .content {
