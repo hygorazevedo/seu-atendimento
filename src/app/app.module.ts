@@ -11,11 +11,13 @@ import { PagamentoModule } from './modules/pagamento/pagamento.module';
 import { ContratoModule } from './modules/contrato/contrato.module';
 import { FooterModule } from './modules/footer/footer.module';
 import { HeaderModule } from './modules/header/header.module';
+import { SharedModule } from './modules/shared/shared.module';
 
 const steps = [
   {
     id: 1,
     description: 'Reservas',
+    fullDescription: 'Listagem de Reservas',
     active: false,
     done: false,
     link: 'reservas'
@@ -23,6 +25,7 @@ const steps = [
   {
     id: 3,
     description: 'Detalhes',
+    fullDescription: 'Detalhes da Reserva',
     active: false,
     done: false,
     link: 'detalhes'
@@ -30,6 +33,7 @@ const steps = [
   {
     id: 5,
     description: 'Modelos',
+    fullDescription: 'Seleção de Modelos',
     active: false,
     done: false,
     link: 'modelos'
@@ -37,6 +41,7 @@ const steps = [
   {
     id: 7,
     description: 'Placas',
+    fullDescription: 'Seleção de Placas',
     active: false,
     done: false,
     link: 'placas'
@@ -44,6 +49,7 @@ const steps = [
   {
     id: 9,
     description: 'Pagamento',
+    fullDescription: 'Forma de Pagamento',
     active: false,
     done: false,
     link: 'pagamento'
@@ -51,6 +57,7 @@ const steps = [
   {
     id: 11,
     description: 'Contrato',
+    fullDescription: 'Resumo de Contrato',
     active: false,
     done: false,
     link: 'contrato'
@@ -64,6 +71,7 @@ const steps = [
     AppRoutingModule,
     BrowserModule,
     NoopAnimationsModule,
+    SharedModule,
     HeaderModule,
     FooterModule,
     ReservaModule,

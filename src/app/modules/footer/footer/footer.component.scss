@@ -1,7 +1,7 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 10px 10px;
 
     .horizontal-footer {
         app-button + app-button {
@@ -16,8 +16,8 @@
         .active {
             ::ng-deep .button {
                 background-color: white;
-                border-color: green;
-                color: green;
+                border-color: #0C985A;
+                color: #0C985A;
             }
         }
     }

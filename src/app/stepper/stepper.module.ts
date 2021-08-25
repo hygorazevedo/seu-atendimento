@@ -4,11 +4,15 @@ import { StepperComponent } from './components/stepper/stepper.component';
 import { StepperService } from './services/stepper.service';
 import { Step } from './models/step.model';
 import { RouterModule } from '@angular/router';
-import { TooltipModule } from '../tooltip/tooltip.module';
+import { ActivePipe } from './pipes/active.pipe';
+import { CountPipe } from './pipes/count.pipe';
+import { PositionPipe } from './pipes/position.pipe';
+import { SharedModule } from '../modules/shared/shared.module';
+import { ProgressCircleComponent } from './components/progress-circle/progress-circle.component';
 
 @NgModule({
-  declarations: [StepperComponent],
-  imports: [CommonModule, RouterModule, TooltipModule],
+  declarations: [StepperComponent, ActivePipe, CountPipe, PositionPipe, ProgressCircleComponent],
+  imports: [CommonModule, RouterModule, SharedModule],
   exports: [StepperComponent]
 })
 export class StepperModule {

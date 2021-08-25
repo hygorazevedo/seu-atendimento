@@ -1,14 +1,18 @@
-<div class="stepper-area" [ngClass]="{'isMobile': (isHandset$|async), 'isDesktop': !(isHandset$|async)}">
+<div class="stepper-desktop" desktop>
     <div class="step-area" *ngFor="let step of steps$ | async">
         <div class="step-progress-area">
-            <a class="step-progress-icon" *ngIf="(isHandset$|async)" [ngClass]="{'done': step.done, 'active': step.active}" (click)="handleNavigate(step.id)" [tooltip]="step.description">
-                <span class="step-progress-sub-icon" [ngClass]="{'done': step.done, 'active': step.active}"></span>
-            </a>
-            <a class="step-progress-icon" *ngIf="!(isHandset$|async)" [ngClass]="{'done': step.done, 'active': step.active}" (click)="handleNavigate(step.id)">
+            <a class="step-progress-icon" [ngClass]="{'done': step.done, 'active': step.active}" (click)="handleNavigate(step.id)">
                 <span class="step-progress-sub-icon" [ngClass]="{'done': step.done, 'active': step.active}"></span>
             </a>
             <span class="step-progress-line" [ngClass]="{'done': step.done || step.active}"></span>
         </div>
-        <div class="step-description" *ngIf="!(isHandset$|async)" [ngClass]="{'done': step.done, 'active': step.active}" (click)="handleNavigate(step.id)">{{step.description}}</div> 
+        <div class="step-description" [ngClass]="{'done': step.done, 'active': step.active}" (click)="handleNavigate(step.id)">{{step.description}}</div> 
+    </div>
+</div>
+
+<div class="stepper-mobile" handset>
+    <div class="step-area" *ngFor="let step of steps$ | async | active">
+        <app-progress-circle [value]="progression" [text]="progressionText"></app-progress-circle>
+        <span class="title">&nbsp;{{step.fullDescription}}</span>
     </div>
 </div>
